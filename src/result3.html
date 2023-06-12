@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eagle Eye BMS DashBoard 1.01</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .chartMenu {
+        width: 100vw;
+        height: 40px;
+        background: #1A1A1A;
+        color: rgba(54, 162, 235, 1);
+      }
+      /* .chartMenu p {
+        padding: 10px;
+        font-size: 20px;
+      } */
+      /* .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: rgba(54, 162, 235, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } */
+      /* .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px rgba(54, 162, 235, 1);
+        background: white;
+      } */
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .column {
+        flex-basis: 50%;
+        padding: 10px;
+        }
+
+        .chartCard {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+        }
+
+        .chartBox {
+        height: 200px; /* Adjust the height as needed */
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+
+        th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        }
+
+        th {
+        background-color: #f2f2f2;
+        }
+    </style>
+
+
+  </head>
+  <body>
+    <div class="chartMenu">
+      <p>Eagle Eye BMS DashBoard 1.01</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="chartCard">
+                <div class="chartBox">
+                <canvas id="myChart1"></canvas>
+                </div>
+            </div>
+            <div class="chartCard">
+                <div class="chartBox">
+                <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+          <table>
+            <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+              <th>Column 3</th>
+              <th>Column 4</th>
+            </tr>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </table>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script type="text/javascript">
+    
+    const labels = ['Cell1', 'Cell2', 'Cell3', 'Cell4', 'Cell5', 'Cell6', 'Cell7', 'Cell8', 'Cell9', 'Cell10', 'Cell11', 'Cell12', 'Cell13', 'Cell14', 'Cell15', 'Cell16'];
+    // Generate random values between 6 and 25 for each cell
+    const randomValues = Array.from({ length: 16 }, () => Math.floor(Math.random() *(20 - 15 + 1))+15);
+    const max = Math.max(...randomValues); // Find the maximum value
+    const min = Math.min(...randomValues); // Find the minimum value
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'BMS Each Cell Voltage',
+            data: randomValues,
+            backgroundColor: randomValues.map((value) => getColor(value)),
+            borderColor: 'rgba(0, 0, 0, 1)',
+            borderWidth: 1
+        }]
+    };
+
+    function getColor(value) {
+        if (value === max) {
+            return 'rgba(255, 0, 0, 0.2)'; // Red for the highest value
+        } else if (value === min) {
+            return 'rgba(250, 250, 210, 0.2)'; // Green for the lowest value
+        } else {
+            return 'rgba(0, 255, 0, 0.2)'; // Green for the lowest value
+        }
+    }
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart1'),
+      config
+    );
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    
+    </script>
+
+  </body>
+</html>

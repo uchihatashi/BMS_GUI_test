@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="final_chart.css">
+    </head>
+
+<body>
+    <div class="row">
+        <div class="column">
+          <div class="chartCard">
+            <div class="chartBox">
+              <canvas id="myChart1"></canvas>
+            </div>
+          </div>
+          
+          <div class="chartCard">
+            <div class="chartBox">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+
+
+        </div>
+        <div class="column">
+            <div class="tableCard">
+                <table>
+                <tr>
+                    <th>Current State</th>
+                    <td>Charging</td>
+                    <th>Prevous State</th>
+                    <td>Idle</td>
+                </tr>
+                <tr>
+                    <th>SOC</th>
+                    <td>70%</td>
+                    <th>SOH</th>
+                    <td>99%</td>
+                </tr>
+                <tr>
+                    <th>Pack Current</th>
+                    <td>2 A</td>
+                    <th>Stack Voltage</th>
+                    <td>58 V</td>
+                </tr>
+                <tr>
+                    <th>Up Time</th>
+                    <td>1d 6h 52m</td>
+                    <th>Total Cycle</th>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th>CHG</th>
+                    <td>ON</td>
+                    <th>DSG</th>
+                    <td>OFF</td>
+                </tr>
+                <tr>
+                    <th>PCHG</th>
+                    <td>OFF</td>
+                    <th>PDSG</th>
+                    <td>OFF</td>
+                </tr>
+                <tr>
+                    <th>Battery Type</th>
+                    <td>LFP</td>
+                    <th>Cell Type</th>
+                    <td>16s</td>
+                </tr>
+                </table>
+            </div>
+            
+          <div class="chartCard">
+            <div class="chartBox">
+                <canvas id="myChart3"></canvas>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="alert">
+                Alert: No alert
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        
+    </div>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script type="text/javascript" src="final_chart.js">
+    
+        
+    </script>
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+.row {
+display: flex;
+}
+
+.column {
+flex-basis: 50%;
+padding: 10px;
+}
+
+.chartCard, .tableCard {
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+.chartBox {
+height: 200px; /* Adjust the height as needed */
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+th, td {
+border: 1px solid #ccc;
+padding: 8px;
+}
+
+th {
+background-color: #f2f2f2;
+}
+
+.gray-row {
+background-color: #f2f2f2; /* Gray color for rows in the first and third columns */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.chartMenu {
+    width: 100vw;
+    height: 40px;
+    background: #1A1A1A;
+    color: rgba(54, 162, 235, 1);
+}
+
+.chartMenu p {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.chartCard {
+    /* width: 100vw;
+    height: calc(100vh - 40px); */
+    background: rgba(54, 162, 235, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chartBox {
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px rgba(54, 162, 235, 1);
+    background: white;
+}
+
+.alert {
+    height: 20px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 2px;
+    padding-top: 5px;
+  }
+  

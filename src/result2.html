@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator App</title>
+  <link rel="stylesheet" href="result3.css">
+</head>
+<body>
+
+<div class="table-container">
+  <div class="table-row table-header">
+    <div class="table-cell">Label</div>
+    <div class="table-cell">Input</div>
+    <div class="table-cell">Confirm</div>
+  </div>
+
+  <div class="table-row">
+    <div class="table-cell">
+      <div class="form__group field">
+        <label for="MinCellTemp" class="form__label">MinCellTemp</label>
+      </div>
+    </div>
+    <div class="table-cell">
+      <div class="form__group field">
+        <select class="form__select" name="MinCellTemp" id="MinCellTemp" required="">
+          <option value="">Select an option</option>
+          <!-- Add dropdown options here -->
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-row">
+    <div class="table-cell">
+      <div class="form__group field">
+        <label for="MaxCellTemp" class="form__label">MaxCellTemp</label>
+      </div>
+    </div>
+    <div class="table-cell">
+      <div class="form__group field">
+        <select class="form__select" name="MaxCellTemp" id="MaxCellTemp" required="">
+          <option value="">Select an option</option>
+          <!-- Add dropdown options here -->
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- Add more rows here -->
+
+  <div class="table-row">
+    <div class="table-cell">
+      <div class="form__group field">
+        <label for="MaxInternalTemp" class="form__label">MaxInternalTemp</label>
+      </div>
+    </div>
+    <div class="table-cell">
+      <div class="form__group field">
+        <select class="form__select" name="MaxInternalTemp" id="MaxInternalTemp" required="">
+          <option value="">Select an option</option>
+          <!-- Add dropdown options here -->
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="table-row">
+    <div class="table-cell">
+      <div class="form__group field">
+        <label for="CellBalanceInterval" class="form__label">CellBalanceInterval</label>
+      </div>
+    </div>
+    <div class="table-cell">
+      <div class="form__group field">
+        <select class="form__select" name="CellBalanceInterval" id="CellBalanceInterval" required="">
+          <option value="">Select an option</option>
+          <!-- Add dropdown options here -->
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- Add more rows here -->
+</div>
+
+
+    <script src="renderer.js"></script>
+</body>
+</html>
